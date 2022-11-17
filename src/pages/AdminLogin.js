@@ -2,10 +2,8 @@ import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import profileImage from '../asset/image/default_profile_pic.jpg';
-function HomeWithLogin() {
-  const { logout, user } = useAuth();
-  console.log(user.id);
-  const id = user.id;
+function AdminLogin() {
+  const { logout } = useAuth();
   return (
     <div>
       <div className="bg-black h-[100px] w-full flex items-center justify-around ">
@@ -16,21 +14,19 @@ function HomeWithLogin() {
           <Link to="/">
             <div className="text-white font-bold">HOME</div>
           </Link>
-          <Link to="/room">
+          <Link to="/admin/room">
             <div className="text-white font-bold">ROOMS</div>
           </Link>
-          <Link to={`/profile/${id}`}>
+          <Link to="/admin/book">
             <div className="text-white font-bold">BOOKING</div>
           </Link>
         </div>
         <div className=" w-[150px] flex justify-between items-center ">
-          <Link to={`/profile/${id}`}>
-            <img
-              style={{ width: '50px', height: '50px' }}
-              src={profileImage}
-              alt="profile"
-            />
-          </Link>
+          <img
+            style={{ width: '50px', height: '50px' }}
+            src={profileImage}
+            alt="profile"
+          />
           <Link to="/">
             <button
               className="text-white font-bold dme-md-2 flex items-center"
@@ -47,4 +43,4 @@ function HomeWithLogin() {
   );
 }
 
-export default HomeWithLogin;
+export default AdminLogin;

@@ -1,14 +1,14 @@
 import React from 'react';
 import Footer from '../layout/footer/footer';
-import RoomContainer from '../features/room/RoomContainer';
 
-function Room() {
+
+function Admin() {
   return (
     <>
-      <RoomContainer />
+      <div className="border border-black w-50"></div>
       <Footer />
     </>
   );
 }
 
-export default Room;
+export default Admin;

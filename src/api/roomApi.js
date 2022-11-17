@@ -1,3 +1,4 @@
 import axios from '../config/axios';
 
-export const bookingRoom = (roomId) => axios.post(`/post/${roomId}`);
+export const getRoom = () => axios.get('/rooms');
+export const getRoomById = (id) => axios.get(`/rooms/id/${id}`);

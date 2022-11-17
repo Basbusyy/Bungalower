@@ -1,13 +1,14 @@
 import React from 'react';
-import PaymentContainer from '../container/PaymentContainer';
-import Footer from '../layout/footer/footer';
-import Header from '../layout/header/Header';
-function Payment() {
+import PaymentContainer from '../features/booking/PaymentContainer';
+
+// import Footer from '../layout/footer/footer';
+// import Header from '../layout/header/Header';
+function Payment({ closeModal }) {
   return (
     <>
-      <Header />
-      <PaymentContainer />
-      <Footer />;
+      {/* <Header /> */}
+      <PaymentContainer closeModal={closeModal} />
+      {/* <Footer />; */}
     </>
   );
 }
